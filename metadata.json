@@ -9,9 +9,9 @@
     ],
     "Category": "",
     "Description": "NixOS Splashscreen for Plasma 6",
-    "Id": "Nim-NixOS-Loading-KDE",
+    "Id": "NixOS-Splash-Plasma6",
     "License": "GPLv3",
-    "Name": "Nim-NixOS Loading",
+    "Name": "NixOS Splash",
     "Website": ""
   },
   "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
