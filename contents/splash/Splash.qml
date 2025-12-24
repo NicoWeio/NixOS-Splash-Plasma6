@@ -9,7 +9,11 @@ import org.kde.kirigami 2 as Kirigami
 
 Rectangle {
     id: root
-    color: "black"
+    // color: "black"
+    gradient: Gradient {
+        GradientStop {position: 1.0; color: "#111155" }
+        GradientStop {position: 0.22; color: "#000011" }
+    }
 
     property int stage
 
@@ -37,7 +41,7 @@ Rectangle {
             anchors.centerIn: parent
 
             asynchronous: true
-            source: "images/eos.svgz"
+            source: "images/NixOS_logo.svg"
 
             sourceSize.width: size
             sourceSize.height: size
