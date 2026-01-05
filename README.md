@@ -1,7 +1,7 @@
 # NixOS-Splash-Plasma6
-![alt text](https://github.com/nimrodium/NixOS-Splash-Plasma6/blob/main/contents/previews/splash.png "preview")
+![preview image of splash screen](https://github.com/nimrodium/NixOS-Splash-Plasma6/blob/main/contents/previews/splash.png "preview")
 
-NixOS splash screen for plasma6
+NixOS splash screen for KDE plasma6
 
 # Usage
 add NixOS-Splash-Plasma6 as a flake input to your system flake, usually `/etc/nixos/flake.nix`
