@@ -28,10 +28,6 @@
                 substituteInPlace $out/share/plasma/look-and-feel/NixOS-Splash-Plasma6/contents/splash/Splash.qml \
                   --replace-fail '"Plasma made by KDE"' '"${splashText}"'
               '';
-              
-              passthru = {
-                override = args: nixos-splash-plasma6.overrideAttrs (old: args);
-              };
             };
             default = nixos-splash-plasma6;
           };
