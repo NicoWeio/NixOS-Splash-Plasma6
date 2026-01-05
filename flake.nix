@@ -10,14 +10,23 @@
     let pkgs = nixpkgs.legacyPackages.${system};
     in {
       packages = rec {
-            nixos-splash-plasma6 = pkgs.stdenv.mkDerivation {
+            nixos-splash-plasma6 = pkgs.stdenv.mkDerivation rec {
               pname = "nixos-splash-plasma6";
               version = "1.0";
               src = ./.;
+              
+              # Allow overriding the splash text
+              splashText = "Plasma made by KDE";
+              
               dontBuild = true;
+              
               installPhase = ''
                 mkdir -p $out/share/plasma/look-and-feel/NixOS-Splash-Plasma6
                 cp -r . $out/share/plasma/look-and-feel/NixOS-Splash-Plasma6
+                
+                # Substitute the splash text in Splash.qml
+                substituteInPlace $out/share/plasma/look-and-feel/NixOS-Splash-Plasma6/contents/splash/Splash.qml \
+                  --replace-fail '"Plasma made by KDE"' '"${splashText}"'
               '';
             };
             default = nixos-splash-plasma6;

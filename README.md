@@ -26,4 +26,38 @@ environment.systemPackages = with pkgs; [
 ]
 ```
 then select it in kde settings.
+
+# Customization
+
+## Changing the Splash Text
+
+You can customize the splash screen text by overriding the `splashText` attribute:
+
+```nix
+environment.systemPackages = with pkgs; [
+  (inputs.nixos-splash-plasma6.packages.${pkgs.system}.default.overrideAttrs (old: {
+    splashText = "Your Custom Text Here";
+  }))
+]
+```
+
+### Examples
+
+**Simple custom text:**
+```nix
+splashText = "NixOS";
+```
+
+**System-specific text:**
+```nix
+splashText = "${config.networking.hostName}";
+```
+
+**Multilingual text:**
+```nix
+splashText = "Welcome • Willkommen • Bienvenue";
+```
+
+The default text is "Plasma made by KDE".
+
 > forked from https://github.com/smokey5787/EOS-Splash-Plasma6
