@@ -16,7 +16,7 @@
               src = ./.;
               
               # Allow overriding the splash text
-              splashText = "Plasma made by KDE";
+              splashText = "Plasma made by KDE · flake default";
               
               dontBuild = true;
               
